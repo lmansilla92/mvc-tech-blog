@@ -1,0 +1,8 @@
+{{!-- LOOP through logged in user blog posts and display here --}}
+<h2>Dashboard</h2>
+    {{#each blogs as |blog|}}
+    <section>
+        <span>{{blog.name}}</span>
+        <span>{{blog.date_created}}</span>
+    </section>
+    {{/each}}
