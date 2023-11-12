@@ -15,10 +15,10 @@
             <header>
                 <nav>
                     <a href="/">Home</a>
-                    <a href="#">Dashboard</a>
+                    <a href="/dashboard">Dashboard</a>
                     <!-- Conditionally render login or logout links -->
                     {{#if logged_in}} 
-                    <a href="/logout">Logout</a>
+                    <a href="/" id="logout">Logout</a>
                     {{else}}
                     <a href="/login">Login</a>
                     {{/if}}
