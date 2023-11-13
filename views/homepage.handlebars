@@ -5,7 +5,7 @@
 <div>
     <header>
         <h2>{{blog.name}}</h2>
-        <span>Posted By {{blog.user.username}} on 11/9/2023</span>
+        <span>Posted By {{blog.user.username}} on {{format_date date_created}}</span>
     </header>
     <p>
         {{blog.description}}
