@@ -1,11 +1,29 @@
 {{!-- LOOP through logged in user blog posts and display here --}}
-{{#if blogs}}
 <h2>Dashboard</h2>
-    {{#each blogs }}
-    <section>
-        <span>{{name}}</span>
-        <span>{{format_date date_created}}</span>
-    </section>
-    {{/each}}
-{{/if}}
-<button>New Blog</button>
+
+<form class="new-blog-form">
+    <div>
+        <header>
+            <h3>Create New Post</h3>
+        </header>
+        <label>Title</label>
+        <input type="text" id="blog-name">
+        <label>Content</label>
+        <input type="text" id="blog-description">
+        <button type="submit" class="create-blog">Create</button>       
+    </div>
+</form>
+
+<div class="user-blogs">
+    {{#if blogs}}
+        {{#each blogs }}
+        <section>
+            <span>{{name}}</span>
+            <span>{{format_date date_created}}</span>
+        </section>
+        {{/each}}
+    {{/if}}
+</div>
+<button class="new-blog-btn">New Blog</button>
+
+<script src="./js/blog.js"></script>
