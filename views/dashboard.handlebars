@@ -1,11 +1,11 @@
 {{!-- LOOP through logged in user blog posts and display here --}}
-{{#if blogs.length}}
+{{#if blogs}}
 <h2>Dashboard</h2>
-    {{#each blogs as |blog|}}
+    {{#each blogs }}
     <section>
-        <span>{{blog.name}}</span>
-        <span>{{blog.date_created}}</span>
+        <span>{{name}}</span>
+        <span>{{format_date date_created}}</span>
     </section>
     {{/each}}
 {{/if}}
-<button>New Post</button>
+<button>New Blog</button>

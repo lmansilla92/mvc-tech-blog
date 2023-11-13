@@ -1,14 +1,16 @@
 {{!-- signup form with username, password, sign up button, log in instead button --}}
-<form>
+<form class="signup-form">
     <div>
         <header>
             <h3>Signup</h3>
         </header>
         <label>Username</label>
-        <input type="text">
+        <input type="text" id="username-signup">
         <label>Password</label>
-        <input type="password">
+        <input type="password" id="password-signup">
         <button type="submit">Signup!</button>
         <a href="/login">Login Instead</a>        
     </div>
 </form>
+
+<script src="./js/signup.js"></script>
