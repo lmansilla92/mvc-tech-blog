@@ -2,13 +2,18 @@
 
 <!-- Render sub layout -->
 {{#each blogs as |blog| }}
-<div>
-    <header>
-        <h2>{{blog.name}}</h2>
-        <span>Posted By {{blog.user.username}} on {{format_date date_created}}</span>
-    </header>
-    <p>
-        {{blog.description}}
-    </p>
-</div>
+
+    <div>
+        <a href="/blogs/{{blog.id}}">
+            <header>
+                <h2>{{blog.name}}</h2>
+                <span>Posted By {{blog.user.username}} on {{format_date date_created}}</span>
+            </header>
+        <p>
+            {{blog.description}}
+        </p>
+        </a>
+   
+    </div>
+
 {{/each}}

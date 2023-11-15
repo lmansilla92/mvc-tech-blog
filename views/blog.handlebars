@@ -1,14 +1,9 @@
-{{#if blogs.length}}
-
-{{#each blogs as ||blog||}}
 <div>
     <header>
-        <h2>{{blog.name}}</h2>
-        <span>Posted By lmansilla on 11/9/2023</span>
+        <h2>{{name}}</h2>
+        <span>Posted By {{user.username}} on {{format_date date_created}}</span>
     </header>
     <p>
-        {{blog.description}}
+        {{description}}
     </p>
 </div>
-
-{{/if}}
