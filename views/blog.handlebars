@@ -7,3 +7,14 @@
         {{description}}
     </p>
 </div>
+
+<form class="comment-form" action="/api/comments/{{id}}" method="POST">
+    <div>
+        <header>
+            <h3>Create New Comment</h3>
+        </header>
+        <label>Comment</label>
+        <input type="text" id="comment-description" name="description">
+        <button type="submit">Submit</button>       
+    </div>
+</form>
