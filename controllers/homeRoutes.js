@@ -55,6 +55,12 @@ router.get('/blogs/:id', async (req, res) => {
                 {
                     model: User,
                     attributes: ['username']
+                },
+                {
+                    model: Comment,
+                    where: {
+                        blog_id: req.params.id
+                    }
                 }
             ]
         });
