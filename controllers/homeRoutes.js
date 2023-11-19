@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Blog, User } = require('../models');
+const { Blog, User, Comment } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
@@ -48,6 +48,21 @@ router.get('/dashboard', withAuth, async (req, res) => {
     };
 });
 
+
+router.get('/comments', async (req, res) => {
+    try {
+        // Get ALL Blogs and join with User data
+        const commentData = await Comment.findAll();
+
+
+        // Pass seralized data and session flag into template
+        res.json(commentData);
+    } catch (err) {
+        res.status(500).json(err);
+    };
+});
+
+
 router.get('/blogs/:id', async (req, res) => {
     try {
         const blogData = await Blog.findByPk(req.params.id, {
@@ -68,10 +83,12 @@ router.get('/blogs/:id', async (req, res) => {
         const blog = blogData.get({ plain: true });
         console.log('blog: ', blog);
 
+
         res.render('blog', {
             ...blog,
             logged_in: req.session.logged_in
         });
+
     } catch (err) {
         res.status(500).json(err);
     };
