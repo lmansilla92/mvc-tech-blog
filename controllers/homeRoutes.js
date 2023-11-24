@@ -73,9 +73,7 @@ router.get('/blogs/:id', async (req, res) => {
                 },
                 {
                     model: Comment,
-                    where: {
-                        blog_id: req.params.id
-                    }
+                    attributes: ['description']
                 }
             ]
         });
