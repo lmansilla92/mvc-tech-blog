@@ -7,12 +7,13 @@ Comment.init(
     {
         id: {
             type: DataTypes.INTEGER,
-            allowNull: false,
             primaryKey: true,
+            allowNull: false,
             autoIncrement: true,
         },
         description: {
-            type: DataTypes.STRING
+            type: DataTypes.STRING,
+            allowNull: false
         },
         date_created: {
             type: DataTypes.DATE,
@@ -21,6 +22,7 @@ Comment.init(
         },
         blog_id: {
             type: DataTypes.INTEGER,
+            allowNull: false,
             references: {
                 model: 'blog',
                 key: 'id'
@@ -28,6 +30,7 @@ Comment.init(
         },
         user_id: {
             type: DataTypes.INTEGER,
+            allowNull: false,
             references: {
                 model: 'user',
                 key: 'id'
@@ -38,7 +41,7 @@ Comment.init(
         sequelize,
         timestamps: false,
         freezeTableName: true,
-        undersored: true,
+        underscored: true,
         modelName: 'comment'
     }
 );
