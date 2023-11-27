@@ -1,3 +1,4 @@
-.new-blog-form {
+.new-blog-form,
+.edit-blog-form {
     display: none;
 }

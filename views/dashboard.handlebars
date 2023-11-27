@@ -14,12 +14,27 @@
     </div>
 </form>
 
+<form class="edit-blog-form" data-id="{{id}}">
+    <div>
+        <header>
+            <h3>Edit Blog</h3>
+        </header>
+        <label>Title</label>
+        <input type="text" id="new-blog-name">
+        <label>Content</label>
+        <input type="text" id="new-blog-description">
+        <button type="submit" class="update-blog">Update</button>       
+    </div>
+</form>
+
 <div class="user-blogs">
     {{#if blogs}}
         {{#each blogs }}
         <section>
             <span>{{name}}</span>
             <span>{{format_date date_created}}</span>
+            <button class="delete" data-id="{{id}}">Delete</button>
+            <button class="edit" data-id="{{id}}">Edit</button>
         </section>
         {{/each}}
     {{/if}}

@@ -18,3 +18,11 @@
         <button type="submit">Submit</button>       
     </div>
 </form>
+
+<h3>Comments</h3>
+{{#each comments as |comment|}}
+<section>
+    <p>{{comment.description}}</p>
+    <span>{{comment.user.username}} {{format_date comment.date_created}}</span>
+</section>
+{{/each}}

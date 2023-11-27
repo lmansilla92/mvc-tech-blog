@@ -20,9 +20,40 @@ router.delete('/:id', withAuth, async (req, res) => {
         const blogData = await Blog.destroy({
             where: {
                 id: req.params.id,
-                user_id: req.session.user_id,
+                user_id: req.session.user_id
             }
         });
+
+        if (!blogData) {
+            res.status(404).json({ message: 'No blog found with this id' });
+            return;
+        };
+
+        res.status(200).json(blogData);
+    } catch (err) {
+        res.status(500).json(err);
+    };
+});
+
+router.put('/:id', withAuth, async (req, res) => {
+    console.log('---------------------------')
+    console.log('req: ', req);
+    console.log('req.body: ', req.body);
+    console.log('req.params', req.params);
+    console.log('req.params.id', req.params.id);
+    console.log('req.session.user_id', req.session.user_id);
+    console.log('---------------------------')
+    try {
+        const blogData = await Blog.update(
+        {   name: req.body.name,
+            description: req.body.description,
+        },
+        {
+            where: {
+                id: req.params.id,
+                user_id: req.session.user_id
+            }
+    });
 
         if (!blogData) {
             res.status(404).json({ message: 'No blog found with this id' });
