@@ -1,4 +1,90 @@
 .new-blog-form,
 .edit-blog-form {
     display: none;
+    width: 50%;
+    margin: 0px auto;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+h1 {
+    margin: 1.5rem;
+}
+
+.nav-a {
+    color: white;
+}
+
+.navbar {
+    border-radius: 10px 10px 10px 10px;
+    height: 4rem;
+}
+
+.card {
+    margin: 2rem auto;
+    border: 3px solid black;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.comment-header {
+    height: 4rem;
+}
+
+.card-text {
+    padding: 1rem;
+}
+
+span,
+h2,
+h3,
+.card-title {
+    display: inline;
+    color: white;
+}
+
+.login-form {
+    margin: 3rem auto;
+    width: 20rem;
+}
+
+.comment-form {
+    width: 50%;
+    border: 3px solid;
+    border-radius: 10px 10px 10px 10px;
+    margin: 0px auto;
+}
+
+.comment-body {
+    padding: 15px;
+}
+
+.dashboard-blog {
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid black;
+    border-radius: 10px 10px 10px 10px;
+    padding: 10px;
+    margin: 10px auto;
+    width: 50%;
+}
+
+.new-blog-btn {
+    display: block;
+    margin: 0px auto;
+}
+
+.create-blog,
+.update-blog {
+    margin-top: 30px;
+}
+
+.comment-btn {
+    margin: 0 0 14px 14px;
 }

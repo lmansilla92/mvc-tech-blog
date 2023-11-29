@@ -1,21 +1,22 @@
-<div>
-    <header>
-        <h2>{{name}}</h2>
+<div class="card border-dark mb-3" style="max-width: 80rem;">
+    <header class="card-header bg-dark">
+        <h2 class="card-title">{{name}}</h2>
         <span>Posted By {{user.username}} on {{format_date date_created}}</span>
     </header>
-    <p>
+    <p class="card-text">
         {{description}}
     </p>
 </div>
 
 <form class="comment-form" action="/api/comments/{{id}}" method="POST">
     <div>
-        <header>
-            <h3>Create New Comment</h3>
+        <header class="card-header bg-dark comment-header">
         </header>
-        <label>Comment</label>
-        <input type="text" id="comment-description" name="description">
-        <button type="submit">Submit</button>       
+        <div class="mb-3 comment-body">
+            <label class="form-label">Comment</label>
+            <input type="text" class="form-control" id="comment-description" name="description">
+        </div>
+        <button class="comment-btn btn btn-secondary" type="submit">Submit</button>       
     </div>
 </form>
 
@@ -26,3 +27,5 @@
     <span>{{comment.user.username}} {{format_date comment.date_created}}</span>
 </section>
 {{/each}}
+
+<script src="./js/blog.js"></script>

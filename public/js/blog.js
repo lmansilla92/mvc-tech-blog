@@ -100,6 +100,11 @@ const updateBlog = async (event) => {
             };
         };
 }
+
+const hideCommentForm = () => {
+    document.querySelector('.comment-form')
+        .setAttribute('style', 'display: none;')
+}
   
 
   
@@ -124,3 +129,8 @@ document
 document  
     .querySelector('.edit-blog-form')
     .addEventListener('submit', updateBlog);
+
+document.querySelector('.main-title').setAttribute('style', 'display: none;');
+
+document.querySelector('.comment-btn')
+    .addEventListener('click', hideCommentForm)
