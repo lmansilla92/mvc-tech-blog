@@ -4,12 +4,17 @@
         <header>
             <h3>Signup</h3>
         </header>
-        <label>Username</label>
-        <input type="text" id="username-signup">
-        <label>Password</label>
-        <input type="password" id="password-signup">
-        <button type="submit">Signup!</button>
-        <a href="/login">Login Instead</a>        
+        <div class="mb-3">
+            <label class="form-label">Username</label>
+            <input class="form-control" type="text" id="username-signup">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Password</label>
+            <input class="form-control" type="password" id="password-signup">
+        </div>
+
+        <button type="submit" class="btn btn-primary">Signup!</button>
+        <a class="text-danger" href="/login">Login Instead</a>        
     </div>
 </form>
 

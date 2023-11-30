@@ -20,12 +20,14 @@
     </div>
 </form>
 
-<h3>Comments</h3>
+<h3 class="comment-h3 text-center">Comments</h3>
 {{#each comments as |comment|}}
-<section>
-    <p>{{comment.description}}</p>
-    <span>{{comment.user.username}} {{format_date comment.date_created}}</span>
+<section class="comment">
+    <header class="card-header bg-dark comment-header">
+    </header>
+    <div class="mb-3 comment-body">
+        <p>{{comment.description}}</p>
+        <span class="comment-info">-{{comment.user.username}} {{format_date comment.date_created}}</span>
+    </div>
 </section>
 {{/each}}
-
-<script src="./js/blog.js"></script>

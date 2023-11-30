@@ -131,6 +131,3 @@ document
     .addEventListener('submit', updateBlog);
 
 document.querySelector('.main-title').setAttribute('style', 'display: none;');
-
-document.querySelector('.comment-btn')
-    .addEventListener('click', hideCommentForm)
