@@ -1,3 +1,4 @@
+// Display new blog form
 const newBlog = (event) => {
     event.preventDefault();
 
@@ -12,6 +13,7 @@ const newBlog = (event) => {
     newBlogForm.setAttribute("style", "display: block;")
 }
 
+// Create blog form handler
 const createBlog = async (event) => {
     event.preventDefault();
 
@@ -39,6 +41,7 @@ const createBlog = async (event) => {
 
 }
 
+// Delete blog handler
 const deleteBlog = async (event) => {
         if (event.target.hasAttribute('data-id')) {
           const id = event.target.getAttribute('data-id');
@@ -55,6 +58,7 @@ const deleteBlog = async (event) => {
         }
 }
 
+// Edit blog handler
 const editBlog = async (event) => {
     event.preventDefault();
 
@@ -71,6 +75,7 @@ const editBlog = async (event) => {
     editForm.setAttribute("data-id", `${id}`);
 }
 
+// Update blog handler
 const updateBlog = async (event) => {
     event.preventDefault();
 
@@ -100,13 +105,6 @@ const updateBlog = async (event) => {
             };
         };
 }
-
-const hideCommentForm = () => {
-    document.querySelector('.comment-form')
-        .setAttribute('style', 'display: none;')
-}
-  
-
   
 document
     .querySelector('.new-blog-btn')

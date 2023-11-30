@@ -14,16 +14,16 @@
 
             <header class="container text-center">
                 <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
-                    <a class="col nav-a" href="/">Home</a>
-                    <a class="col nav-a" href="/dashboard">Dashboard</a>
+                    <a class="col text-white" href="/">Home</a>
+                    <a class="col text-white" href="/dashboard">Dashboard</a>
                     <!-- Conditionally render login or logout links -->
                     {{#if logged_in}} 
-                    <a class="col nav-a" href="/" id="logout">Logout</a>
+                    <a class="col text-white" href="/" id="logout">Logout</a>
                     {{else}}
-                    <a class="col nav-a" href="/login">Login</a>
+                    <a class="col text-white" href="/login">Login</a>
                     {{/if}}
                 </nav>
-                <h1 class="text-center main-title">
+                <h1 class="main-title text-center m-3">
                     <a href="/">MVC Tech Blog</a>
                 </h1>
             </header>

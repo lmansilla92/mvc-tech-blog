@@ -18,7 +18,7 @@ const loginFormHandler = async (event) => {
             document.location.replace('/dashboard'); 
             console.log('logged in!');
         } else {
-            alert(response.statusText);
+            document.querySelector('.invalid-login').textContent = 'Invalid Login'
         };
     };
 };

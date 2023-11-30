@@ -2,6 +2,7 @@ const router = require('express').Router();
 const { Blog, User, Comment } = require('../models');
 const withAuth = require('../utils/auth');
 
+// Get all users
 router.get('/', async (req, res) => {
     try {
         // Get ALL Blogs and join with User data
@@ -50,7 +51,7 @@ router.get('/dashboard', withAuth, async (req, res) => {
     };
 });
 
-
+// Get comments route
 router.get('/comments', async (req, res) => {
     try {
         // Get ALL Blogs and join with User data
@@ -97,6 +98,7 @@ router.get('/blogs/:id', withAuth, async (req, res) => {
     };
 });
 
+// Login route
 router.get('/login', (req, res) => {
     // If the user is already logged in, redirect the request to another route
     if (req.session.logged_in) {
@@ -106,6 +108,7 @@ router.get('/login', (req, res) => {
     res.render('login');
 });
 
+// Signup route
 router.get('/signup', (req, res) => {
 
     res.render('signup');

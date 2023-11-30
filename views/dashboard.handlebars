@@ -1,11 +1,11 @@
 {{!-- LOOP through logged in user blog posts and display here --}}
 
-<h1 class="text-center">{{title}}</h1>
+<h1 class="text-center m-3">{{title}}</h1>
 
 <form class="new-blog-form">
     <div class="card border-dark mb-3">
         <header class="card-header bg-dark">
-            <h3 class="card-title">Create New Post</h3>
+            <h3 class="card-title">Create New Blog</h3>
         </header>
         <div class="card-body">
             <div class="mb-3">
@@ -28,11 +28,11 @@
         </header>
         <div class="card-body">
             <div class="mb-3">
-                <label class="form-label">Title</label>
+                <label class="form-label">Edit Title</label>
                 <input class="form-control" type="text" id="new-blog-name" required>
             </div>
             <div class="mb-3">
-                <label class="form-label">Content</label>
+                <label class="form-label">Edit Content</label>
                 <input class="form-control" type="text" id="new-blog-description" required>
                 <button type="submit" class="update-blog btn btn-primary">Update</button>   
             </div>

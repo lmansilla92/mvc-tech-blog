@@ -1,3 +1,4 @@
+// Import dependencies
 const path = require('path');
 const express = require('express');
 const session = require('express-session');
@@ -14,6 +15,7 @@ const PORT = process.env.PORT || 3001;
 // Set up handlebars engine with custom helpers
 const hbs = exphbs.create({ helpers });
 
+// Define session
 const sess = {
     secret: 'secret',
     cookie: {
@@ -28,6 +30,7 @@ const sess = {
         db: sequelize
     })
 };
+
 
 app.use(session(sess));
 
