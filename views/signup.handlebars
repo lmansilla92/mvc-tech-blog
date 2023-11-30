@@ -2,15 +2,15 @@
 <form class="signup-form">
     <div>
         <header>
-            <h3>Signup</h3>
+            <h3 class="text-dark d-block mb-4">Signup</h3>
         </header>
         <div class="mb-3">
             <label class="form-label">Username</label>
-            <input class="form-control" type="text" id="username-signup">
+            <input class="form-control" type="text" id="username-signup" required>
         </div>
         <div class="mb-3">
             <label class="form-label">Password</label>
-            <input class="form-control" type="password" id="password-signup">
+            <input class="form-control" type="password" id="password-signup" minlength="8" required>
         </div>
 
         <button type="submit" class="btn btn-primary">Signup!</button>
